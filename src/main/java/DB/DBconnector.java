@@ -38,7 +38,7 @@ public class DBconnector {
             }
         } catch (SQLException e) {
             log.error("Couldn't connect to the database.");
-            log.throwing(new RuntimeException(e));
+            log.error(e.getStackTrace());
         }
     }
     public void disconnectFromDB() {
@@ -49,7 +49,7 @@ public class DBconnector {
             }
         } catch (SQLException e) {
             log.error("Couldn't close connection.");
-            log.throwing(new RuntimeException(e));
+            log.error(e.getStackTrace());
         }
     }
     public Connection getConnection() {
