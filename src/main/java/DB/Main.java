@@ -13,16 +13,27 @@ import java.sql.SQLException;
  * @date 2024/05/07 19:07
  */
 public class Main {
+    /*
+    Class-interface.
+     */
+
+    //Variables.
     private static DBconnector db = DBconnector.getInstance();
     private static DBoperator dBoperator = new DBoperator(db);
     private static final Logger log = LogManager.getLogger("mainLog");
     private static BufferedReader bufferedReader;
+
+    //Main executable method.
     public static void main(String[] args) throws IOException {
-            UI();
-            db.disconnectFromDB();
-            bufferedReader.close();
+            try{
+                UI();
+            } finally {
+                db.disconnectFromDB();
+                bufferedReader.close();
+            }
     }
 
+    //Interface method.
     public static void UI() {
         while(true) {
             bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -50,6 +61,7 @@ public class Main {
                         } catch (NumberFormatException e) {
                             log.error("It's not a number. Program is closing.");
                             log.error(e.getStackTrace());
+                            return;
                         }
                     }
                     case 3 -> {
@@ -70,9 +82,29 @@ public class Main {
                         } catch (NumberFormatException e) {
                             log.error("It's not a number. Program is closing.");
                             log.error(e.getStackTrace());
+                            return;
                         }
                     }
-//                case 6 ->;
+                    case 6 -> {
+                        log.info(dBoperator.showAll());
+                        log.info("Type interested ID: ");
+                        int id = 0;
+                        try {
+                            id = Integer.parseInt(bufferedReader.readLine());
+                        } catch (NumberFormatException e) {
+                            log.error("It's not an number. Program is closing.");
+                            log.error(e.getStackTrace());
+                            return;
+                        }
+                        log.info("Type name:");
+                        String name = bufferedReader.readLine();
+                        log.info("Type surname:");
+                        String surname = bufferedReader.readLine();
+                        log.info("Type date of birth in format (yyyy-mm-dd):");
+                        String dateOfBirth = bufferedReader.readLine();
+
+                        log.info(dBoperator.updateByID(id, name, surname, dateOfBirth));
+                    }
                     default -> {
                         log.info("Program is closed.");
                         return;
@@ -81,6 +113,7 @@ public class Main {
             } catch (IOException | SQLException e) {
                 log.error("IO or SQL error.");
                 log.error(e.getStackTrace());
+                return;
             }
         }
     }

@@ -1,45 +1,33 @@
-2024-05-08 15:17:39,271 [INFO] mainLog main - Connection established.
-2024-05-08 15:17:39,274 [INFO] mainLog main - Chose an option:
+2024-05-08 15:47:07,271 [INFO] mainLog main - Connection established.
+2024-05-08 15:47:07,274 [INFO] mainLog main - Chose an option:
 1.Show all data
 2.Show person by ID
 3.Add new Person
 4.Delete all data
 5.Delete person by ID
-6.Update peson info
+6.Update person info
 Type everything else to leave.
 Type it:
-2024-05-08 15:17:39,915 [INFO] mainLog main - 1
-2024-05-08 15:17:39,943 [INFO] mainLog main - id=9, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-08'
+2024-05-08 15:47:10,998 [INFO] mainLog main - 6
+2024-05-08 15:47:11,024 [INFO] mainLog main - 
+id=10, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-08'
+id=11, name='Sasha', surname='Mendoza', birthDate='2002-08-17', dateOfCreation='2024-05-08'
 
-2024-05-08 15:17:39,943 [INFO] mainLog main - Chose an option:
+2024-05-08 15:47:11,024 [INFO] mainLog main - Type interested ID: 
+2024-05-08 15:47:25,611 [INFO] mainLog main - Type name:
+2024-05-08 15:47:31,905 [INFO] mainLog main - Type surname:
+2024-05-08 15:47:34,391 [INFO] mainLog main - Type date of birth in format (yyyy-mm-dd):
+2024-05-08 15:47:41,986 [INFO] mainLog main - Person was updated. id=10, name='Omar Enrique', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-08'
+
+2024-05-08 15:47:41,986 [INFO] mainLog main - Chose an option:
 1.Show all data
 2.Show person by ID
 3.Add new Person
 4.Delete all data
 5.Delete person by ID
-6.Update peson info
+6.Update person info
 Type everything else to leave.
 Type it:
-2024-05-08 15:17:44,405 [INFO] mainLog main - 5
-2024-05-08 15:17:44,405 [INFO] mainLog main - Type id:
-2024-05-08 15:17:46,002 [INFO] mainLog main - Person with id 9 deleted
-2024-05-08 15:17:46,002 [INFO] mainLog main - Chose an option:
-1.Show all data
-2.Show person by ID
-3.Add new Person
-4.Delete all data
-5.Delete person by ID
-6.Update peson info
-Type everything else to leave.
-Type it:
-2024-05-08 15:17:50,019 [INFO] mainLog main - 1
-2024-05-08 15:17:50,022 [INFO] mainLog main - 
-2024-05-08 15:17:50,022 [INFO] mainLog main - Chose an option:
-1.Show all data
-2.Show person by ID
-3.Add new Person
-4.Delete all data
-5.Delete person by ID
-6.Update peson info
-Type everything else to leave.
-Type it:
+2024-05-08 15:47:48,309 [INFO] mainLog main - 9
+2024-05-08 15:47:48,309 [INFO] mainLog main - Program is closed.
+2024-05-08 15:47:48,314 [INFO] mainLog main - Connection closed.

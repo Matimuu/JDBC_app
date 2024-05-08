@@ -8,12 +8,19 @@ import java.util.Date;
  * @date 2024/05/07 19:07
  */
 public class Person {
+    /*
+    Class entity to represent DB data.
+     */
+
+    //Variables.
     private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private int id;
     private String name;
     private String surname;
     private Date birthDate;
     private Date dateOfCreation;
+
+    //Constructors.
     public Person() {
 
     }
@@ -24,7 +31,7 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-
+    //Methods.
     public String getName() {
         return name;
     }

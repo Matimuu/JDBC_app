@@ -12,6 +12,11 @@ import java.sql.SQLException;
  * @date 2024/05/07 17:27
  */
 public class DBconnector {
+    /*
+    Class based on singletone pattern to connect to the database.
+     */
+
+    //Variables.
     private static DBconnector instance;
     private static final Logger log = LogManager.getLogger("mainLog");
     private static final String URL = "jdbc:mysql://127.0.0.1:8889/JDBC_app";
@@ -19,10 +24,12 @@ public class DBconnector {
     private static final String PASSWORD = "root";
     private static Connection connection;
 
+    //Constructor.
     private DBconnector() {
         connectToDB();
     }
 
+    // Methods.
     public static DBconnector getInstance() {
         if (instance == null) {
             instance = new DBconnector();

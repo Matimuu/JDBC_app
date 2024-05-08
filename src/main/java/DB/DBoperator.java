@@ -12,15 +12,22 @@ import java.time.format.DateTimeFormatter;
  * @date 2024/05/07 21:10
  */
 public class DBoperator {
+    /*
+    Class to make operations with DB.
+     */
+
+    //Variables.
     private DBconnector db;
     private PreparedStatement preparedStatement;
     private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private int check = 0;
 
+    //Constructors.
     public DBoperator(DBconnector db) {
         this.db = db;
     }
 
+    //Methods.
     public String addPerson(String name, String surname, String dateOfBirth) throws SQLException {
         String insert = "INSERT INTO persons (person_name, person_surname, person_dateOfBirth) VALUES(?,?,?)";
 
@@ -30,17 +37,19 @@ public class DBoperator {
         preparedStatement.setDate(3, Date.valueOf(LocalDate.parse(dateOfBirth, dateTimeFormatter)));
 
         check = preparedStatement.executeUpdate();
+        preparedStatement.clearParameters();
         return check > 0 ? "The person was added." : "The person wasn't added";
     }
 
     public String showAll() throws SQLException {
         String showAll = "SELECT * FROM persons";
-        StringBuilder dbList = new StringBuilder();
+        StringBuilder dbList = new StringBuilder("\n");
 
         preparedStatement = db.getConnection().prepareStatement(showAll);
         ResultSet resultSet = preparedStatement.executeQuery();
 
         showLoopPersons(resultSet, dbList);
+        preparedStatement.clearParameters();
         return dbList.toString();
     }
 
@@ -52,6 +61,7 @@ public class DBoperator {
         preparedStatement.setInt(1, id);
 
         showLoopPersons(preparedStatement.executeQuery(), personInfo);
+        preparedStatement.clearParameters();
         return personInfo.toString();
     }
 
@@ -74,19 +84,36 @@ public class DBoperator {
 
         preparedStatement = db.getConnection().prepareStatement(deleteSQL);
         check = preparedStatement.executeUpdate();
+        preparedStatement.clearParameters();
 
         return check > 0 ? "DB is clear." : "DB still contain information.";
     }
 
     public String deleteByID(int id) throws SQLException {
         String deleteByID = "DELETE FROM persons WHERE person_id = ?";
+        String deletedPerson = showByID(id);
 
         preparedStatement = db.getConnection().prepareStatement(deleteByID);
         preparedStatement.setInt(1, id);
 
         check = preparedStatement.executeUpdate();
+        preparedStatement.clearParameters();
 
-        return check > 0 ? "Person with id " + id + " deleted" : "Person wasn't deleted";
+        return check > 0 ? "Person " +showByID(id)+ " was deleted" : "Person wasn't deleted";
     }
 
+    public String updateByID(int id, String newName, String newSurname, String newDateOfBirth) throws SQLException {
+        String updateSQL = "UPDATE persons SET person_name=?, person_surname=?, person_dateOfBirth=? WHERE person_id=?";
+        preparedStatement = db.getConnection().prepareStatement(updateSQL);
+
+        preparedStatement.setString(1, newName);
+        preparedStatement.setString(2, newSurname);
+        preparedStatement.setDate(3, Date.valueOf(LocalDate.parse(newDateOfBirth, dateTimeFormatter)));
+        preparedStatement.setInt(4, id);
+
+        check = preparedStatement.executeUpdate();
+        preparedStatement.clearParameters();
+
+        return check > 0 ? "Person was updated. "+showByID(id) : "Person wasn't updated. "+showByID(id);
+    }
 }
