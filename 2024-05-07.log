@@ -1,0 +1,90 @@
+2024-05-07 19:19:03,501 [INFO] mainLog main - Connection established.
+2024-05-07 19:25:35,639 [INFO] mainLog main - Connection established.
+2024-05-07 19:26:17,543 [INFO] mainLog main - Connection established.
+2024-05-07 19:26:17,545 [INFO] mainLog main - Connection closed.
+2024-05-07 19:39:04,422 [INFO] mainLog main - Connection established.
+2024-05-07 19:39:04,435 [INFO] mainLog main - Connection closed.
+2024-05-07 19:41:37,609 [INFO] mainLog main - Connection established.
+2024-05-07 19:41:37,619 [INFO] mainLog main - id=1, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,620 [INFO] mainLog main - id=2, name='TestName', surname='TestSurname', birthDate='2000-10-29', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,620 [INFO] mainLog main - id=3, name='newJavaName', surname='javaSurname', birthDate='2002-08-17', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,620 [INFO] mainLog main - id=4, name='batchName1', surname='batchSurname1', birthDate='2002-08-18', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,621 [INFO] mainLog main - id=5, name='batchName2', surname='batchSurname2', birthDate='2002-08-19', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,621 [INFO] mainLog main - id=6, name='batchName3', surname='batchSurname3', birthDate='2002-08-20', dateOfCreation='2024-05-07'
+2024-05-07 19:41:37,622 [INFO] mainLog main - Connection closed.
+2024-05-07 21:04:33,299 [INFO] mainLog main - Connection established.
+2024-05-07 21:04:33,302 [INFO] mainLog main - Connection closed.
+2024-05-07 21:04:41,370 [INFO] mainLog main - Connection established.
+2024-05-07 21:04:41,371 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+2024-05-07 21:04:45,896 [INFO] mainLog main - Connection closed.
+2024-05-07 21:30:35,462 [INFO] mainLog main - Connection established.
+2024-05-07 21:31:15,841 [INFO] mainLog main - Connection established.
+2024-05-07 21:31:25,023 [INFO] mainLog main - Connection established.
+2024-05-07 21:31:45,308 [INFO] mainLog main - Connection established.
+2024-05-07 21:33:08,275 [INFO] mainLog main - Connection established.
+2024-05-07 21:33:08,278 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Type it:
+2024-05-07 21:33:14,100 [INFO] mainLog main - Its not an option.
+2024-05-07 21:33:14,105 [INFO] mainLog main - Connection closed.
+2024-05-07 21:33:38,876 [INFO] mainLog main - Connection established.
+2024-05-07 21:33:38,880 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Type it:
+2024-05-07 21:33:40,996 [INFO] mainLog main - Its not an option.
+2024-05-07 21:33:41,000 [INFO] mainLog main - Connection closed.
+2024-05-07 21:33:48,256 [INFO] mainLog main - Connection established.
+2024-05-07 21:33:50,586 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Type it:
+2024-05-07 21:36:21,650 [INFO] mainLog main - Its not an option.
+2024-05-07 21:36:21,658 [INFO] mainLog main - Connection closed.
+2024-05-07 21:36:22,918 [INFO] mainLog main - Connection established.
+2024-05-07 21:36:22,921 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Type it:
+2024-05-07 21:36:24,774 [INFO] mainLog main - id=1, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-07'id=2, name='TestName', surname='TestSurname', birthDate='2000-10-29', dateOfCreation='2024-05-07'id=3, name='newJavaName', surname='javaSurname', birthDate='2002-08-17', dateOfCreation='2024-05-07'id=4, name='batchName1', surname='batchSurname1', birthDate='2002-08-18', dateOfCreation='2024-05-07'id=5, name='batchName2', surname='batchSurname2', birthDate='2002-08-19', dateOfCreation='2024-05-07'id=6, name='batchName3', surname='batchSurname3', birthDate='2002-08-20', dateOfCreation='2024-05-07'
+2024-05-07 21:36:24,776 [INFO] mainLog main - Connection closed.
+2024-05-07 21:37:40,903 [INFO] mainLog main - Connection established.
+2024-05-07 21:37:40,907 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Type it:
+2024-05-07 21:37:42,913 [INFO] mainLog main - id=1, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-07'
+id=2, name='TestName', surname='TestSurname', birthDate='2000-10-29', dateOfCreation='2024-05-07'
+id=3, name='newJavaName', surname='javaSurname', birthDate='2002-08-17', dateOfCreation='2024-05-07'
+id=4, name='batchName1', surname='batchSurname1', birthDate='2002-08-18', dateOfCreation='2024-05-07'
+id=5, name='batchName2', surname='batchSurname2', birthDate='2002-08-19', dateOfCreation='2024-05-07'
+id=6, name='batchName3', surname='batchSurname3', birthDate='2002-08-20', dateOfCreation='2024-05-07'
+
+2024-05-07 21:37:42,915 [INFO] mainLog main - Connection closed.

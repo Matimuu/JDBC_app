@@ -71,6 +71,6 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthDate='" +  simpleDateFormat.format(birthDate) + '\'' +
-                ", dateOfCreation='" + simpleDateFormat.format(dateOfCreation) + '\'';
+                ", dateOfCreation='" + simpleDateFormat.format(dateOfCreation) + "'\n";
     }
 }

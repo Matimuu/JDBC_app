@@ -1,0 +1,42 @@
+2024-05-08 03:33:55,048 [INFO] mainLog main - Connection established.
+2024-05-08 03:33:55,050 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Everything else to leave.
+Type it:
+2024-05-08 03:33:56,487 [INFO] mainLog main - Type name:
+2024-05-08 03:33:58,215 [INFO] mainLog main - Type surname:
+2024-05-08 03:33:59,183 [INFO] mainLog main - Type date of birth in format (yyyy-mm-dd):
+2024-05-08 03:34:06,223 [INFO] mainLog main - The person was added.
+2024-05-08 03:34:06,223 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Everything else to leave.
+Type it:
+2024-05-08 03:34:10,089 [INFO] mainLog main - id=1, name='Omar', surname='Mendoza', birthDate='2000-10-28', dateOfCreation='2024-05-07'
+id=2, name='TestName', surname='TestSurname', birthDate='2000-10-29', dateOfCreation='2024-05-07'
+id=3, name='newJavaName', surname='javaSurname', birthDate='2002-08-17', dateOfCreation='2024-05-07'
+id=4, name='batchName1', surname='batchSurname1', birthDate='2002-08-18', dateOfCreation='2024-05-07'
+id=5, name='batchName2', surname='batchSurname2', birthDate='2002-08-19', dateOfCreation='2024-05-07'
+id=6, name='batchName3', surname='batchSurname3', birthDate='2002-08-20', dateOfCreation='2024-05-07'
+id=7, name='aaa', surname='aaa', birthDate='2023-02-11', dateOfCreation='2024-05-08'
+
+2024-05-08 03:34:10,089 [INFO] mainLog main - Chose an option:
+1.Show all data
+2.Show person by ID
+3.Add new Person
+4.Delete all data
+5.Delete person by ID
+6.Update peson info
+Everything else to leave.
+Type it:
+2024-05-08 03:36:08,127 [INFO] mainLog main - Program is closed.
+2024-05-08 03:36:08,132 [INFO] mainLog main - Connection closed.

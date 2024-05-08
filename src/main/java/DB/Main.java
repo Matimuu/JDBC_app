@@ -3,35 +3,75 @@ package DB;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * @author Mendoza Perez Omar Enrique
  * @date 2024/05/07 19:07
  */
 public class Main {
+    private static DBconnector db = DBconnector.getInstance();
+    private static DBoperator dBoperator = new DBoperator(db);
     private static final Logger log = LogManager.getLogger("mainLog");
-    public static void main(String[] args) {
-        DBconnection db = DBconnection.getInstance();
-        String query = "SELECT * FROM persons";
+    private static BufferedReader bufferedReader;
+    public static void main(String[] args) throws IOException {
+            UI();
+            db.disconnectFromDB();
+            bufferedReader.close();
+    }
 
-        try {
-            Statement statement = db.getConnection().createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            while (resultSet.next()) {
-                Person person = new Person();
-                person.setId(resultSet.getInt(1));
-                person.setName(resultSet.getString(2));
-                person.setSurname(resultSet.getString(3));
-                person.setBirthDate(resultSet.getDate(4));
-                person.setDateOfCreation(resultSet.getDate(5));
-                log.info(person);
+    public static void UI() {
+        while(true) {
+            bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            try {
+                log.info("""
+                        Chose an option:
+                        1.Show all data
+                        2.Show person by ID
+                        3.Add new Person
+                        4.Delete all data
+                        5.Delete person by ID
+                        6.Update peson info
+                        Type everything else to leave.
+                        Type it: """);
+
+                int option = Integer.parseInt(bufferedReader.readLine());
+                log.info(option);
+
+                switch (option) {
+                    case 1 -> log.info(dBoperator.showAll());
+                    case 2 -> {
+                        log.info("Type id: ");
+                        log.info(dBoperator.showByID(Integer.parseInt(bufferedReader.readLine())));
+                    }
+                case 3 -> {
+                        log.info("Type name:");
+                        String name = bufferedReader.readLine();
+                        log.info("Type surname:");
+                        String surname = bufferedReader.readLine();
+                        log.info("Type date of birth in format (yyyy-mm-dd):");
+                        String dateOfBirth = bufferedReader.readLine();
+
+                        log.info(dBoperator.addPerson(name,surname,dateOfBirth));
+                }
+//                case 4 ->;
+//                case 5 ->;
+//                case 6 ->;
+                    default -> {
+                        log.info("Program is closed.");
+                        return;
+                    }
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
-        db.disconnectFromDB();
     }
 }
+
+//show
+//create
+//delete
+//update

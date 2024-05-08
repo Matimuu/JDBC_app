@@ -8,7 +8,7 @@
             <PatternLayout
                     pattern="${layout}"/>
         </Console>
-        <File name="logFile" fileName="${date:yyyy-MM-dd}.log" append="true">
+        <File name="logFile" fileName="${date:yyyy-MM-dd}.log" append="false">
             <PatternLayout pattern="%d [%p] %c{1} %t - %m%n" />
         </File>
     </Appenders>

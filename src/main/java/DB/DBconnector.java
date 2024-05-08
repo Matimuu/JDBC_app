@@ -11,21 +11,21 @@ import java.sql.SQLException;
  * @author Mendoza Perez Omar Enrique
  * @date 2024/05/07 17:27
  */
-public class DBconnection {
-    private static DBconnection instance;
+public class DBconnector {
+    private static DBconnector instance;
     private static final Logger log = LogManager.getLogger("mainLog");
     private static final String URL = "jdbc:mysql://127.0.0.1:8889/JDBC_app";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
     private static Connection connection;
 
-    private DBconnection() {
+    private DBconnector() {
         connectToDB();
     }
 
-    public static DBconnection getInstance() {
+    public static DBconnector getInstance() {
         if (instance == null) {
-            instance = new DBconnection();
+            instance = new DBconnector();
         }
         return instance;
     }
@@ -38,7 +38,7 @@ public class DBconnection {
             }
         } catch (SQLException e) {
             log.error("Couldn't connect to the database.");
-            throw new RuntimeException(e);
+            log.throwing(new RuntimeException(e));
         }
     }
     public void disconnectFromDB() {
@@ -49,7 +49,7 @@ public class DBconnection {
             }
         } catch (SQLException e) {
             log.error("Couldn't close connection.");
-            throw new RuntimeException(e);
+            log.throwing(new RuntimeException(e));
         }
     }
     public Connection getConnection() {
